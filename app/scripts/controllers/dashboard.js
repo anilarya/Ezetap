@@ -8,7 +8,7 @@
  * Controller of the ezetabApp
  */
 angular.module('ezetabApp')
-  .controller('DashboardCtrl', function ($scope, $cookies,$cookieStore,$rootScope, $state, $location, dashboard) {
+  .controller('DashboardCtrl', function ($scope,$rootScope, $state, $location, dashboard) {
     
   	$scope.model = {
 
@@ -38,12 +38,7 @@ angular.module('ezetabApp')
       }
       else{
 
-      }
-
-
-      console.log("padedWidthNumber", start_at_temp.length , padding.substr(0,width-start_at_temp.length));
-
-      
+      } 
       
       for(var i=0 ; i<total_number; i++){
           var start_at_temp = String(start_at); 
@@ -55,8 +50,7 @@ angular.module('ezetabApp')
             final_value  = final_value + String(luhnDigit(final_value))
           }
 
-          $scope.model.generated_num.push(final_value);
-          console.log("final_value" , $scope.model.generated_num);
+          $scope.model.generated_num.push(final_value); 
           start_at += 1;
       }  
 
