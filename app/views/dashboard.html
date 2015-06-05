@@ -1,0 +1,97 @@
+<br>
+ 
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-6">
+			<div class="panel panel-primary">
+				  <!-- Default panel contents -->
+				 <div class="panel-heading"><font size="5" color="white"> <b> INPUT</b></font> </div>
+				 	<div class="panel-body">
+					 <table class="table table-condensed table-borderless" style="background-color: ;"> 
+		                <tbody> 
+		                    <tr>
+		                        <td> 
+		                        	<font size="5" color="black">version # :</font> 
+		                        </td>
+		                        <td>
+		                        	<div class="k-textbox">
+										<input id="version" name="version" type="text" ng-model="model.version_number" min="0">
+									</div>
+		                        </td>
+		                    </tr>
+		                    <tr>
+		                        <td> 
+		                        	<font size="5" color="black">Start at :</font> 
+		                        </td>
+		                        <td>
+		                        	<div class="k-textbox">
+										<input id="start_at" name="start_at" type="number" ng-model="model.start_at" min="0">
+									</div>
+		                        </td>
+		                    </tr>
+		                    <tr>
+		                        <td> 
+		                        	<font size="5" color="black">Width :</font>  
+		                        </td>
+		                        <td>
+		                        	<div class="k-textbox">
+										<input id="width" name="width" type="number" ng-model="model.width" min="0">
+									</div>
+		                        </td>
+		                    </tr>
+		                    <tr>
+		                        <td> 
+		                        	<font size="5" color="black">pad :</font> 
+		                        </td>
+		                        <td>
+		                        	<div class="k-textbox">
+										<input id="pad" name="pad" type="number" ng-model="model.pad" min="0" max="9">
+									</div>
+		                        </td>
+		                    </tr>
+		                    <tr>
+		                        <td> 
+		                        	<font size="5" color="black">Total numbers :</font> 
+		                        </td>
+		                        <td>
+		                        	<div class="k-textbox">
+										<input id="total_number" name="total_number" type="number" ng-model="model.total_number" min="1">
+									</div>
+		                        </td>
+		                    </tr>
+		                    <tr>
+		                        <td> 
+		                        	<font size="5" color="black">Checksum :</font> 
+		                        </td>
+		                        <td>
+		                        	 <input type="checkbox" ng-model="model.checksum"> {{model.checksum}}
+		                        </td>
+		                    </tr>
+		                </tbody>
+		            </table>
+		            <div align="center">
+		             	<button type="button" class="btn btn-info" ng-click="submitInfo()">Submit</button>
+		            </div>
+		        </div>
+		     </div>
+            	
+        </div>	
+        <div class="col-md-6">
+        	
+        	<div class="panel panel-primary">
+				  <!-- Default panel contents -->
+				 <div class="panel-heading"><font size="5" color="white"> <b>OUTPUT</b></font> </div>
+				 	<div class="panel-body">
+			    		<div style="min-height: 5px; max-height: 320px;  overflow-y:scroll">
+				       		<div ng-repeat="value in model.generated_num">
+				       			 <b>&nbsp;&nbsp;&nbsp;{{value}}</b>
+				       		</div>
+			       		</div> 
+				  </div> 
+			</div>
+       		
+       		
+        </div>
+	</div>
+</div>
