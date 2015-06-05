@@ -8,7 +8,7 @@
  * Controller of the ezetabApp
  */
 angular.module('ezetabApp')
-  .controller('DashboardCtrl', function ($scope,$rootScope, $state, $location, dashboard) {
+  .controller('DashboardCtrl', function ($scope,$rootScope, $state, $location) {
     
   	$scope.model = {
 
